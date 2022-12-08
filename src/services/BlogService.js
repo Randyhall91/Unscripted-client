@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js";
 import { Post } from "../models/Post";
+import { logger } from "../utils/Logger.js";
 import { api } from "./AxiosService"
 
 
@@ -13,8 +14,8 @@ class BlogService {
       params:
         { 'populate': "*" },
     })
-    // console.log(res.data.data);
-    console.log(res.data.data.map(p => new Post(p)))
+    logger.log(res.data.data);
+    logger.log(res.data.data.map(p => new Post(p)))
     AppState.posts = res.data.data.map(p => new Post(p))
 
 
@@ -25,7 +26,7 @@ class BlogService {
       params:
         { 'populate': "*" },
     })
-    console.log(res.data.data);
+    logger.log(res.data.data);
 
     AppState.activePost = new Post(res.data.data)
   }
