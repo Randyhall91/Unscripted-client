@@ -5,4 +5,3 @@ export const api = Axios.create({
   timeout: 8000,
   headers: { Authorization: `Bearer ${bearer}` }
 })
-
