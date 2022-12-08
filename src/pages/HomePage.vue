@@ -28,7 +28,6 @@
     <div class="row mt-5">
       <div class="col-lg-6">
         <img class="img-fluid" :src="(home.lifeStylePicture)">
-        <!-- <img class="img-fluid" src="HomePage/Page/trees with carvings.JPG" alt="trees with carvings"> -->
       </div>
       <div class="col-lg-6 d-flex flex-column justify-content-center pt-3">
         <h2>{{ home.aboutLifeStyleHeader }}</h2>
@@ -49,32 +48,6 @@
 
       </div>
     </div>
-    <!-- <div class="row lets-chat-text p-3 text-center mb-5">
-      <div class="col-3">
-        <div class="border border-dark p-3 bg-white d-flex justify-content-center align-items-center lets-chat-box">
-
-          <p>What is the difference between tradidtional & lifestyle photography</p>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="border border-dark p-3 bg-white d-flex justify-content-center align-items-center lets-chat-box">
-
-          <p>How to pick the best photographer for your family</p>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="border border-dark p-3 bg-white d-flex justify-content-center align-items-center lets-chat-box">
-
-          <p>What is lifystyle photography</p>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="border border-dark p-3 bg-white d-flex justify-content-center align-items-center lets-chat-box">
-
-          <p>What </p>
-        </div>
-      </div>
-    </div> -->
 
 
 
@@ -103,7 +76,6 @@ export default {
     onMounted(() => getHomePage())
     return {
       home: computed(() => AppState.homePage),
-      // mugshot: AppState.homePage.mugshot.url
 
     };
   },
@@ -113,12 +85,8 @@ export default {
 
 <style scoped lang="scss">
 .mugshot {
-  // background-image: url('HomePage/Page/women laughing.jpg');
   max-height: 70vh;
   width: auto;
-  // background-position: 3rem;
-  // background-position-x: -10rem;
-  // background-position-y: -24rem;
 }
 
 .lets-chat-text {

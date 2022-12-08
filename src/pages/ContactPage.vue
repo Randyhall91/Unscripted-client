@@ -35,7 +35,6 @@
 import { ref } from 'vue';
 import ContactForm from '../components/ContactForm.vue';
 import { formService } from '../services/FormService.js'
-// import { VideoPlayer } from '../components/VideoPlayer.vue'
 export default {
   components: { ContactForm }
 }
