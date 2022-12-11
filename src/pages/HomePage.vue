@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid p-0">
+  <div v-if="home" class="container-fluid p-0">
     <div class="row">
       <div class="col-12 mt-5 mx-0 px-0">
         <BannerCarousel />

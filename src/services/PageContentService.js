@@ -9,13 +9,13 @@ class PageContentService {
 
 
   async getHomePageContent() {
-    const res = await api.get('api/home-pages', {
+    const res = await api.get('api/homepage', {
       params:
         { 'populate': "*" },
     })
-    logger.log(res.data);
-    logger.log(new Home(res.data.data[0]));
-    AppState.homePage = new Home(res.data.data[0])
+    logger.log(res.data.data.attributes);
+    logger.log(new Home(res.data.data.attributes));
+    AppState.homePage = new Home(res.data.data.attributes)
   }
 }
 
