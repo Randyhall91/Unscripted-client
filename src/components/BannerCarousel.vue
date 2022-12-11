@@ -1,5 +1,5 @@
 <template>
-  <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div v-if="home" id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
     <div class="carousel-inner carouselSize py-3">
       <div v-for="(img, index) in home.carousel" :id="index" :class="index === 0 ? 'active' : ''" class="carousel-item"
