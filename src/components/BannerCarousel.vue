@@ -4,7 +4,7 @@
     <div class="carousel-inner carouselSize py-3">
       <div v-for="(img, index) in home.carousel" :id="index" :class="index === 0 ? 'active' : ''" class="carousel-item"
         data-bs-interval="2000">
-        <img :src="(img.medium.url)" class="carousel-img img-fit d-block" :alt="img.medium.name">
+        <img :src="(img.large.url)" class="carousel-img img-fit d-block" :alt="img.medium.name">
         <div class="carousel-text">
           <h1>Treasure Valley</h1>
           <h1>LifeStyle Family Photography</h1>
