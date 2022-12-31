@@ -13,7 +13,7 @@ class PageContentService {
       params:
         { 'populate': "*" },
     })
-    logger.log(res.data.data.attributes);
+    // logger.log(res.data.data.attributes);
     logger.log(new Home(res.data.data.attributes));
     AppState.homePage = new Home(res.data.data.attributes)
   }

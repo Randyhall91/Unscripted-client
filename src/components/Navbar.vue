@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg barlow bg-body-bg d-flex align-content-center elevation-2">
     <div class="d-flex align-items-center ms-3">
       <router-link class="navbar-brand" :to="{ name: 'Home' }">
-        <img v-if="home.logo" :src="home.logo" alt="">
+        <img v-if="logo" :src="logo" alt="Home" class="logo">
       </router-link>
     </div>
     <div class="navbar-links position-absolute top-2 start-50 translate-middle-x" id="navbarText">
@@ -51,6 +51,7 @@
 </template>
 
 <script>
+import { computed } from 'vue'
 import { AppState } from '../AppState'
 import NavbarMobileModal from './NavbarMobileModal.vue';
 export default {
@@ -64,6 +65,9 @@ export default {
 </script>
 
 <style scoped>
+nav{
+  min-height: 6rem;
+}
 h1 {
   font-size: 4rem;
 }
@@ -72,6 +76,11 @@ h1 {
   position: absolute;
   right: 1rem;
   bottom: -2rem;
+}
+.logo {
+  position: absolute;
+  left: 1rem;
+  bottom: -4rem;
 }
 
 a:hover {

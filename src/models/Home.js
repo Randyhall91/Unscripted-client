@@ -14,6 +14,6 @@ export class Home {
     this.lifeStylePicture = data.lifeStylePicture.data.attributes.formats.medium.url
     this.letsChatHeader = data.letsChatHeader
     this.letsChatContent = data.letsChatContent
-    this.logo = data.logo
+    this.logo = data.logo.data.attributes.formats.thumbnail.url
   }
 }

@@ -14,7 +14,7 @@
     </div>
     <div class="row mt-5 pb-5 pe-3">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
-        <h2 class="ps-2">{{ home.aboutHeader }}</h2>
+        <h3 class="ps-2">{{ home.aboutHeader }}</h3>
         <p class="px-5 fragment">
           {{ home.aboutContent }}
         </p>
