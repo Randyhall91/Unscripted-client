@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg barlow bg-body-bg d-flex align-content-center elevation-2">
     <div class="d-flex align-items-center ms-3">
       <router-link class="navbar-brand" :to="{ name: 'Home' }">
-        <h1>Unscripted</h1>
+        <img v-if="home.logo" :src="home.logo" alt="">
       </router-link>
     </div>
     <div class="navbar-links position-absolute top-2 start-50 translate-middle-x" id="navbarText">
@@ -51,10 +51,13 @@
 </template>
 
 <script>
+import { AppState } from '../AppState'
 import NavbarMobileModal from './NavbarMobileModal.vue';
 export default {
   setup() {
-    return {}
+    return {
+      logo: computed(()=> AppState.homePage.logo)
+    }
   },
   components: { NavbarMobileModal }
 }
