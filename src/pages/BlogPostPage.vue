@@ -14,9 +14,10 @@
     </div>
     <div class="row">
       <div class="col-6">
-        <p>
+        <!-- <p>
           {{ post.body }}
-        </p>
+        </p> -->
+        <div v-html="post.body"></div>
       </div>
       <div class="col-6">
         <div v-for="img in post.extraImgs">
@@ -35,7 +36,6 @@ import { useRoute } from 'vue-router';
 import { AppState } from '../AppState.js';
 import { blogService } from '../services/BlogService.js';
 import Pop from '../utils/Pop.js';
-
 export default {
   setup() {
     const route = useRoute()
@@ -51,6 +51,7 @@ export default {
     onMounted(() => {
       setActivePost()
     })
+    
     return {
       post: computed(() => AppState.activePost),
 
