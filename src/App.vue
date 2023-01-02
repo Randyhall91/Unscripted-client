@@ -2,25 +2,44 @@
   <header>
     <Navbar />
   </header>
-  <main>
+  <main class="mb-5">
     <router-view />
   </main>
-  <!-- <NavbarMobileModal /> -->
+  <footer>
+    <div class="container my-5">
+      <div v-if="home" class="row g-0 mt-5 d-flex justify-content-center">
+          <div class="col-lg-6">
+            <h2 class="text-center lobster">{{ home.letsChatHeader }}</h2>
+          </div>
+          <div class="col-12 mt-3">
+            <p class="fragment text-center">
+              {{ home.letsChatContent }}
+            </p>
+
+          </div>
+          <div class="text-center">
+            <router-link :to="{ name: 'Contact' }">
+              <button class="border bg-dark me-5 px-4 py-1 mobile-none lets-chat fs-1">Secure Your Spot Now</button>
+            </router-link>
+          </div>
+       </div>
+  </div>
+  </footer>
 </template>
 
 <script>
 import { computed } from 'vue'
 import { AppState } from './AppState'
 import Navbar from './components/Navbar.vue'
-// import NavbarMobileModal from './components/NavbarMobileModal.vue'
-
+import FooterComp from "./components/FooterComp.vue"
 export default {
   setup() {
     return {
-      appState: computed(() => AppState)
+      appState: computed(() => AppState),
+      home: computed(()=> AppState.homePage)
     }
   },
-  components: { Navbar }
+  components: { Navbar, FooterComp }
 }
 </script>
 <style lang="scss">
