@@ -2,11 +2,11 @@
   <header>
     <Navbar />
   </header>
-  <main class="mb-5">
+  <main>
     <router-view />
   </main>
-  <footer>
-    <div class="container my-5">
+  <footer class="mt-auto mb-5">
+    <div class="d-flex justify-content-center">
       <div v-if="home" class="row g-0 mt-5 d-flex justify-content-center">
           <div class="col-lg-6">
             <h2 class="text-center lobster">{{ home.letsChatHeader }}</h2>
@@ -32,8 +32,20 @@ import { computed } from 'vue'
 import { AppState } from './AppState'
 import Navbar from './components/Navbar.vue'
 import FooterComp from "./components/FooterComp.vue"
+import { onMounted } from 'vue';
+import Pop from "./utils/Pop";
+import { pageContentService } from "./services/PageContentService";
 export default {
   setup() {
+    async function getHomePage() {
+      try {
+        await pageContentService.getHomePageContent()
+      }
+      catch (error) {
+        Pop.error('[getHomePageContent]', error)
+      }
+    }
+    onMounted(() => getHomePage())
     return {
       appState: computed(() => AppState),
       home: computed(()=> AppState.homePage)
@@ -70,9 +82,6 @@ export default {
   src: local('Barlow'), url(./fonts/Barlow_Condensed/BarlowCondensed-ThinItalic.ttf);
 }
 
-body {
-  font-family: "Aboreto";
-}
 
 .tangerine {
   font-family: "Tangerine";
@@ -93,11 +102,15 @@ body {
 :root {
   --main-height: calc(100vh - 32px - 64px);
 }
-
-
-footer {
-  display: grid;
-  place-content: center;
-  height: 32px;
+body {
+  font-family: "Aboreto";
+  
 }
+
+
+
+// footer {
+//   position:absolute;
+//   bottom: 0;
+// }
 </style>

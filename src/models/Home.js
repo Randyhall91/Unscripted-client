@@ -15,5 +15,8 @@ export class Home {
     this.letsChatHeader = data.letsChatHeader
     this.letsChatContent = data.letsChatContent
     this.logo = data.logo.data.attributes.formats.thumbnail.url
+    this.review = data.review
+    this.reviewName = data.reviewName
+    this.reviewImg = data.reviewImg.data.attributes.formats.thumbnail.url
   }
 }
