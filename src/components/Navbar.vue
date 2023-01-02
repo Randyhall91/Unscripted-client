@@ -43,7 +43,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <router-link :to="{ name: 'Contact' }">
-      <button class="border bg-dark me-5 px-4 py-1 mobile-none lets-chat fs-1">Lets Chat</button>
+      <button class="border bg-dark me-5 px-4 py-1 mobile-none lets-chat fs-1">Contact</button>
     </router-link>
 
   </nav>

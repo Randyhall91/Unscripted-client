@@ -1,20 +1,20 @@
 <template>
   <div v-if="home" class="container-fluid p-0">
-    <div class="row">
+    <div class="row g-0">
       <div class="col-12 mt-5 mx-0 px-0">
         <BannerCarousel />
       </div>
     </div>
-    <div class="row d-flex justify-content-center mt-5">
+    <div class="row g-0 d-flex justify-content-center mt-5">
       <div class="col-lg-12 text-center">
         <p class="barlow fs-1">
           {{ home.quote }}
         </p>
       </div>
     </div>
-    <div class="row mt-5 pb-5 pe-3">
+    <div class="row g-0 mt-5 pb-5 pe-3">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
-        <h3 class="ps-2">{{ home.aboutHeader }}</h3>
+        <h3 class="px-5">{{ home.aboutHeader }}</h3>
         <p class="px-5 fragment">
           {{ home.aboutContent }}
         </p>
@@ -25,29 +25,42 @@
         <img class="mugshot" :src="home.mugshot">
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row g-0 mt-5">
       <div class="col-lg-6">
         <img class="img-fluid" :src="(home.lifeStylePicture)">
       </div>
       <div class="col-lg-6 d-flex flex-column justify-content-center pt-3">
-        <h2>{{ home.aboutLifeStyleHeader }}</h2>
+        <h2 class="px-5">{{ home.aboutLifeStyleHeader }}</h2>
         <p class="px-5 fragment">
           {{ home.aboutLifeStyleContent }}
 
         </p>
       </div>
     </div>
-    <div class="row mt-5 d-flex justify-content-center">
-      <div class="col-lg-6">
-        <h2 class="text-center lobster">{{ home.letsChatHeader }}</h2>
+    <section class="p-4 p-md-5 text-center text-lg-start shadow-1-strong rounded">
+      <div class="row d-flex justify-content-center">
+        <div v-if="home.review" class="col-md-10">
+          <div class="card">
+            <div class="card-body m-3">
+              <div class="row">
+                <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                  <img :src="home.reviewImg"
+                    class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
+                </div>
+                <div class="col-lg-8">
+                  <p class="text-muted fw-light mb-4">
+                    {{ home.review }}
+                  </p>
+                  <p class="fw-bold lead mb-2"><strong>{{ home.reviewName }}</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-12 mt-3">
-        <p class="fragment text-center">
-          {{ home.letsChatContent }}
-        </p>
+    </section>
 
-      </div>
-    </div>
+  
 
 
 
@@ -65,15 +78,15 @@ import { onMounted } from 'vue';
 
 export default {
   setup() {
-    async function getHomePage() {
-      try {
-        await pageContentService.getHomePageContent()
-      }
-      catch (error) {
-        Pop.error('[getHomePageContent]', error)
-      }
-    }
-    onMounted(() => getHomePage())
+    // async function getHomePage() {
+    //   try {
+    //     await pageContentService.getHomePageContent()
+    //   }
+    //   catch (error) {
+    //     Pop.error('[getHomePageContent]', error)
+    //   }
+    // }
+    // onMounted(() => getHomePage())
     return {
       home: computed(() => AppState.homePage),
 
@@ -84,6 +97,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 .mugshot {
   max-height: 70vh;
   width: auto;
@@ -104,3 +118,6 @@ export default {
   }
 }
 </style>
+
+
+

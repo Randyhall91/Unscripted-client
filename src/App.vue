@@ -5,22 +5,53 @@
   <main>
     <router-view />
   </main>
-  <!-- <NavbarMobileModal /> -->
+  <footer class="mt-auto mb-5">
+    <div class="d-flex justify-content-center">
+      <div v-if="home" class="row g-0 mt-5 d-flex justify-content-center">
+          <div class="col-lg-6">
+            <h2 class="text-center lobster">{{ home.letsChatHeader }}</h2>
+          </div>
+          <div class="col-12 mt-3">
+            <p class="fragment text-center">
+              {{ home.letsChatContent }}
+            </p>
+
+          </div>
+          <div class="text-center">
+            <router-link :to="{ name: 'Contact' }">
+              <button class="border bg-dark me-5 px-4 py-1 mobile-none lets-chat fs-1">Secure Your Spot Now</button>
+            </router-link>
+          </div>
+       </div>
+  </div>
+  </footer>
 </template>
 
 <script>
 import { computed } from 'vue'
 import { AppState } from './AppState'
 import Navbar from './components/Navbar.vue'
-// import NavbarMobileModal from './components/NavbarMobileModal.vue'
-
+import FooterComp from "./components/FooterComp.vue"
+import { onMounted } from 'vue';
+import Pop from "./utils/Pop";
+import { pageContentService } from "./services/PageContentService";
 export default {
   setup() {
+    async function getHomePage() {
+      try {
+        await pageContentService.getHomePageContent()
+      }
+      catch (error) {
+        Pop.error('[getHomePageContent]', error)
+      }
+    }
+    onMounted(() => getHomePage())
     return {
-      appState: computed(() => AppState)
+      appState: computed(() => AppState),
+      home: computed(()=> AppState.homePage)
     }
   },
-  components: { Navbar }
+  components: { Navbar, FooterComp }
 }
 </script>
 <style lang="scss">
@@ -51,9 +82,6 @@ export default {
   src: local('Barlow'), url(./fonts/Barlow_Condensed/BarlowCondensed-ThinItalic.ttf);
 }
 
-body {
-  font-family: "Aboreto";
-}
 
 .tangerine {
   font-family: "Tangerine";
@@ -74,11 +102,15 @@ body {
 :root {
   --main-height: calc(100vh - 32px - 64px);
 }
-
-
-footer {
-  display: grid;
-  place-content: center;
-  height: 32px;
+body {
+  font-family: "Aboreto";
+  
 }
+
+
+
+// footer {
+//   position:absolute;
+//   bottom: 0;
+// }
 </style>
