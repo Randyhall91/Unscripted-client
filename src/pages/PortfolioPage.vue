@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid">
-    <div class="row mt-5">
+    <div v-if="portfolioImgs" class="row mt-5">
       <div v-for="img in portfolioImgs" class="col-lg-4 p-3 mb-3">
-        <img class="img-fluid" :src="(img.url)" :alt="img.name">
+        <img class="img-fluid" :key="img.id" :src="img.url" :alt="img.name">
       </div>
     </div>
   </div>

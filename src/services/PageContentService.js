@@ -23,7 +23,7 @@ class PageContentService {
       params:
         { 'populate': "*" },
     })
-    logger.log(new PricingPage(res.data.data.attributes))
+    // logger.log(new PricingPage(res.data.data.attributes))
     AppState.pricingPage = new PricingPage(res.data.data.attributes)
   }
 }

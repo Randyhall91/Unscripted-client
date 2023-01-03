@@ -9,8 +9,8 @@ class PortfolioService {
 
   async getPortfolio() {
     const res = await api.get('api/upload/files')
+    // console.log(res.data);
     AppState.portfolioImgs = res.data.map(img => new PortfolioImgs(img))
-    logger.log(AppState.portfolioImgs);
   }
 }
 

@@ -27,7 +27,7 @@
     </div>
     <div class="row g-0 mt-5">
       <div class="col-lg-6">
-        <img class="img-fluid" :src="(home.lifeStylePicture)">
+        <img class="img-fluid" :src="home.lifeStylePicture">
       </div>
       <div class="col-lg-6 d-flex flex-column justify-content-center pt-3">
         <h2 class="px-5">{{ home.aboutLifeStyleHeader }}</h2>
