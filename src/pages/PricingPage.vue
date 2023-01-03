@@ -21,8 +21,10 @@
         </p>
       </div>
     </div>
+    
     <div v-html="pricing.session">
     </div>
+
     <section class="p-4 p-md-5 text-center text-lg-start shadow-1-strong rounded">
       <div class="row d-flex justify-content-center">
         <div v-if="pricing.review" class="col-md-10">
