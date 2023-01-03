@@ -37,6 +37,7 @@
         </p>
       </div>
     </div>
+    <!-- Review -->
     <section class="p-4 p-md-5 text-center text-lg-start shadow-1-strong rounded">
       <div class="row d-flex justify-content-center">
         <div v-if="home.review" class="col-md-10">
@@ -45,7 +46,7 @@
               <div class="row">
                 <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
                   <img :src="home.reviewImg"
-                    class="rounded-circle img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
+                    class="rounded-circle shadow-1" alt="woman avatar" width="200" height="200" />
                 </div>
                 <div class="col-lg-8">
                   <p class="text-muted fw-light mb-4">

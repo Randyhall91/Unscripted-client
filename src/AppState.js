@@ -12,4 +12,6 @@ export const AppState = reactive({
   portfolioImgs: [],
   /** @type {import('./models/Home.js').Home} */
   homePage: {},
+  /** @type {import('./models/PricingPage.js').PricingPage} */
+  pricingPage: {},
 })
