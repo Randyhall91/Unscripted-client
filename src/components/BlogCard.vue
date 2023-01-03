@@ -1,7 +1,7 @@
 <template>
   <router-link :to="{ name: 'BlogPost', params: { id: p.id } }">
-    <div class="card text-white card-bg">
-      <img class="card-img card-height" @click="setActivePost" :src="p.headerImg.url" :alt="p.headerImg.name">
+    <div class="card text-white card-bg" :style="{ 'background-image': 'url(' + p.headerImg.url + ')', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'bottom' }">
+      <!-- <img class="" @click="setActivePost" :src="p.headerImg.url" :alt="p.headerImg.name"> -->
       <h4 class="card-title bg-text">{{ p.title }}</h4>
     </div>
   </router-link>
@@ -28,16 +28,18 @@ export default {
 <style lang="scss" scoped>
 .card-bg {
   position: relative;
+  min-height: 30vh;
+  // background-size: ;
 }
 
 .bg-text {
   background-color: rgb(0, 0, 0);
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(246, 236, 224, 0.4);
   /* Black w/opacity/see-through */
-  color: white;
+  color: black;
   font-weight: bold;
-  border: 3px solid #f1f1f1;
+  // border: 3px solid #f1f1f1;
   position: absolute;
   top: 50%;
   left: 50%;
