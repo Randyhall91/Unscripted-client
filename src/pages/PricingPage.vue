@@ -79,7 +79,7 @@ export default {
 
 <style lang="scss" scoped>
 h1 {
-  font-size: 4rem
+  font-size: 3rem
 }
 
 h2 {
