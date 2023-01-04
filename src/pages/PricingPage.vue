@@ -10,13 +10,13 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-6 order-lg-1 order-2 px-5">
+      <div class="col-lg-6 order-lg-1 order-2 justify-content-center d-flex">
         <div class="mobile-spacing">
           <img :src="pricing.descriptionImg" alt="">
         </div>
       </div>
       <div class="col-lg-6 order-lg-2 order-1 px-3">
-        <p class="fragment fs-4">
+        <p class="fragment fs-5">
          {{ pricing.description }}
         </p>
       </div>

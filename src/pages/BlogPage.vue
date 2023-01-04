@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row mt-5">
-      <div class="col-3 mt-5" v-for="post in posts">
+      <div class="col-6 mt-5" v-for="post in posts">
         <BlogCard :p="post" :key="post" />
       </div>
     </div>

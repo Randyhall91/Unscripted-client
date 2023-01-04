@@ -19,7 +19,8 @@
           </div>
           <div class="text-center">
             <router-link :to="{ name: 'Contact' }">
-              <button class="border bg-dark me-5 px-4 py-1 mobile-none lets-chat fs-1">Secure Your Spot Now</button>
+              <!-- TODO Onhover button -->
+              <button class="btn btn-dark border mobile-none lets-chat fs-1">Secure Your Spot Now</button>
             </router-link>
           </div>
        </div>
