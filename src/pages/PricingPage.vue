@@ -3,7 +3,7 @@
 
     <div class="row">
       <div class="col-lg-6 order-1 text-center d-flex align-items-center justify-content-center">
-        <h1>Investment</h1>
+        <h1>{{ pricing.header }}</h1>
       </div>
       <div class="col-lg-6 p-5 order-2">
         <img :src="pricing.headerImg" alt="">
