@@ -38,5 +38,7 @@ export default {
 
 
 <style lang="scss" scoped>
-
+.col-6{
+  height: 50vh;
+}
 </style>

@@ -28,14 +28,14 @@ export default {
 <style lang="scss" scoped>
 .card-bg {
   position: relative;
-  min-height: 30vh;
+  min-height: 50vh;
   // background-size: ;
 }
 
 .bg-text {
   background-color: rgb(0, 0, 0);
   /* Fallback color */
-  background-color: rgba(246, 236, 224, 0.4);
+  background-color: rgba(246, 236, 224, 0.8);
   /* Black w/opacity/see-through */
   color: black;
   font-weight: bold;

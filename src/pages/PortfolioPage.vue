@@ -1,11 +1,10 @@
 <template>
-  <div class="container-fluid">
-    <div v-if="portfolioImgs" class="row mt-5">
-      <div v-for="img in portfolioImgs" class="col-lg-4 p-3 mb-3">
+  
+    <div v-if="portfolioImgs" class="bricks mt-5">
+      <div v-for="img in portfolioImgs" class="p-3 mb-3">
         <img class="img-fluid" :key="img.id" :src="img.url" :alt="img.name">
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -35,3 +34,13 @@ export default {
   }
 }
 </script>
+<style scoped lang="scss">
+.bricks {
+  columns: 4;
+}
+@media screen and (max-width:992px) {
+  .bricks {
+    columns: 2;
+  }
+}
+</style>

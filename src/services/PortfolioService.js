@@ -8,9 +8,12 @@ import { api } from "./AxiosService.js"
 class PortfolioService {
 
   async getPortfolio() {
-    const res = await api.get('api/upload/files')
-    // console.log(res.data);
-    AppState.portfolioImgs = res.data.map(img => new PortfolioImgs(img))
+    const res = await api.get('api/portfolio', {
+      params:
+        { 'populate': "*" },
+    })
+    console.log(res.data.data.attributes.imgs.data);
+    AppState.portfolioImgs = res.data.data.attributes.imgs.data.map(img => new PortfolioImgs(img))
   }
 }
 
