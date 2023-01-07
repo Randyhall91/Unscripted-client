@@ -5,7 +5,7 @@
         <BannerCarousel />
       </div>
     </div>
-    <div class="row g-0 d-flex justify-content-center mt-5">
+    <div class="row g-0 d-flex justify-content-center mt-3">
       <div class="col-lg-12 text-center">
         <p class="barlow fs-1">
           {{ home.quote }}
