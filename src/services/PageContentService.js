@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { Contact } from "../models/Contact.js";
 import { Home } from "../models/Home.js";
 import { PricingPage } from "../models/PricingPage.js";
 import { logger } from "../utils/Logger.js";
@@ -26,6 +27,17 @@ class PageContentService {
     // logger.log(new PricingPage(res.data.data.attributes))
     AppState.pricingPage = new PricingPage(res.data.data.attributes)
   }
+
+  async getContactPage(){
+    const res = await api.get('api/contactpage', {
+      params:
+        { 'populate': "*" },
+    })
+    logger.log(new Contact(res.data.data.attributes))
+    AppState.contactPage = new Contact(res.data.data.attributes)
+  }
+
+
 }
 
 export const pageContentService = new PageContentService()

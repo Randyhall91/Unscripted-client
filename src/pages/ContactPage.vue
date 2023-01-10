@@ -1,10 +1,5 @@
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        <!-- Video player goes here or we move it down below the form -->
-      </div>
-    </div>
+  <div class="container">
     <div class="row d-flex justify-content-center mt-5">
       <div class="col-lg-6">
         <ContactForm />
@@ -17,10 +12,6 @@
           We live so briefly in time before returning to eternity... We should document every chance we can for the sake
           of those who remain...
         </p>
-      </div>
-    </div>
-    <div class="row mt-5">
-      <div class="col-12 p-0">
       </div>
     </div>
     <div class="row p-4 p-md-5 text-center text-lg-start shadow-1-strong rounded">
@@ -45,6 +36,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -65,7 +57,7 @@ export default {
         Pop.error('[getContactPage]', error)
       }
     }
-    onMounted(()=> getContactPage)
+    onMounted(()=> getContactPage())
 
     return{
       contact: computed(()=> AppState.contactPage)
@@ -78,9 +70,4 @@ export default {
 
 
 <style lang="scss" scoped>
-.landscape {
-  max-height: 40vh;
-  width: 100%;
-  object-fit: cover;
-}
 </style>
