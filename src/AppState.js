@@ -14,4 +14,6 @@ export const AppState = reactive({
   homePage: {},
   /** @type {import('./models/PricingPage.js').PricingPage} */
   pricingPage: {},
+  /** @type {import('./models/Contact.js').Contact} */
+  contactPage: {},
 })

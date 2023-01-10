@@ -23,19 +23,55 @@
       <div class="col-12 p-0">
       </div>
     </div>
-    <!-- <div class="row">
-      <div class="col-3"></div>
-      TODO Insert 4 Blog tiles here
-    </div> -->
+    <div class="row p-4 p-md-5 text-center text-lg-start shadow-1-strong rounded">
+      <div class="d-flex col-12 justify-content-center">
+        <div v-if="contact.review">
+          <div class="card">
+            <div class="card-body container m-3">
+              <div class="row">
+                <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
+                  <img :src="contact.reviewImg"
+                    class="rounded-circle shadow-1" alt="woman avatar" width="200" height="200" />
+                </div>
+                <div class="col-lg-8">
+                  <p class="text-muted fw-light mb-4">
+                    {{ contact.review }}
+                  </p>
+                  <p class="fw-bold lead mb-2"><strong>{{ contact.reviewName }}</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 
 <script>
-import { ref } from 'vue';
+import { computed } from '@vue/reactivity';
+import { onMounted } from "vue";
+import { AppState } from "../AppState";
 import ContactForm from '../components/ContactForm.vue';
-import { formService } from '../services/FormService.js'
+import { pageContentService } from "../services/PageContentService";
+import Pop from "../utils/Pop";
 export default {
+  setup(){
+    async function getContactPage(){
+      try {
+        await pageContentService.getContactPage()
+      } catch (error) {
+        Pop.error('[getContactPage]', error)
+      }
+    }
+    onMounted(()=> getContactPage)
+
+    return{
+      contact: computed(()=> AppState.contactPage)
+    }
+
+  },
   components: { ContactForm }
 }
 </script>

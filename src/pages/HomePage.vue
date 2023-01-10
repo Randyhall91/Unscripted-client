@@ -38,11 +38,11 @@
       </div>
     </div>
     <!-- Review -->
-    <section class="p-4 p-md-5 text-center text-lg-start shadow-1-strong rounded">
-      <div class="row d-flex justify-content-center">
-        <div v-if="home.review" class="col-md-10">
+    <div class="row p-4 p-md-5 text-center text-lg-start shadow-1-strong rounded">
+      <div class="d-flex col-12 justify-content-center">
+        <div v-if="home.review">
           <div class="card">
-            <div class="card-body m-3">
+            <div class="card-body container m-3">
               <div class="row">
                 <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
                   <img :src="home.reviewImg"
@@ -59,7 +59,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
   
 
