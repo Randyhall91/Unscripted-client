@@ -18,9 +18,11 @@
               <li class="mb-5 border-bottom border-dark pb-2">
                 <router-link :to="{ name: 'Blog' }" class="fs-1 text-dark selectable text-uppercase"
                   data-bs-dismiss="modal">
-                  Blog
+                  <p class="fs-1 text-dark selectable text-uppercase" data-bs-dismiss="modal">
+                    Blog
+                  </p>
                 </router-link>
-              </li>
+                </li>
               <li class="mb-5 border-bottom border-dark pb-2">
                 <router-link :to="{ name: 'Pricing' }" class="fs-1 text-dark selectable text-uppercase"
                   data-bs-dismiss="modal">

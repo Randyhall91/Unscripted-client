@@ -6,7 +6,7 @@
     <router-view />
   </main>
   <footer class="mt-auto mb-5">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center container">
       <div v-if="home" class="row g-0 mt-5 d-flex justify-content-center">
           <div class="col-lg-6">
             <h2 class="text-center lobster">{{ home.letsChatHeader }}</h2>
