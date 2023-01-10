@@ -46,9 +46,9 @@ export default {
 
 
 <style lang="scss" scoped>
-.carouselSize {
-  height: 80vh;
-}
+// .carouselSize {
+//   height: 80vh;
+// }
 
 .img-fit {
   width: 100%;

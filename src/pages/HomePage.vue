@@ -1,18 +1,18 @@
 <template>
-  <div v-if="home" class="container-fluid p-0">
-    <div class="row g-0">
-      <div class="col-12 mt-5 mx-0 px-0">
+  <div v-if="home" class="container-fluid g-0 p-0">
+    <div class="row">
+      <div class="col-12 mt-5 px-0">
         <BannerCarousel />
       </div>
     </div>
-    <div class="row g-0 d-flex justify-content-center mt-3">
+    <div class="row d-flex justify-content-center mt-3">
       <div class="col-lg-12 text-center">
         <p class="barlow fs-1">
           {{ home.quote }}
         </p>
       </div>
     </div>
-    <div class="row g-0 mt-5 pb-5 pe-3">
+    <div class="row mt-5 pb-5">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
         <h3 class="px-5">{{ home.aboutHeader }}</h3>
         <p class="px-5 fragment">
@@ -22,10 +22,10 @@
       <!-- <div :style="{ backgroundImg: `url(${(home.mugshot)})` }" class="col-lg-6 mugshot">
       </div> -->
       <div class="col-lg-6 d-flex justify-content-center">
-        <img class="mugshot" :src="home.mugshot">
+        <img class="img-fluid" :src="home.mugshot">
       </div>
     </div>
-    <div class="row g-0 mt-5">
+    <div class="row mt-5">
       <div class="col-lg-6">
         <img class="img-fluid" :src="home.lifeStylePicture">
       </div>
@@ -60,11 +60,6 @@
         </div>
       </div>
     </div>
-
-  
-
-
-
   </div>
 </template>
 
@@ -87,10 +82,13 @@ export default {
 
 <style scoped lang="scss">
 
-.mugshot {
-  max-height: 70vh;
-  width: auto;
+.row{
+  margin-right: 0;
 }
+// .mugshot {
+//   max-height: 70vh;
+//   width:min-content;
+// }
 
 .lets-chat-text {
   font-size: large;

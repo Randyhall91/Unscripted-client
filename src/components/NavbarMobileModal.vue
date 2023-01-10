@@ -42,7 +42,7 @@
 
             </ul>
             <router-link :to="{ name: 'Contact' }">
-              <button class="border bg-dark me-5 px-4 py-1 fs-1" data-bs-dismiss="modal">Lets Chat</button>
+              <button class="border bg-dark me-5 px-4 py-1 fs-1" data-bs-dismiss="modal">Contact</button>
             </router-link>
 
           </div>
