@@ -2,10 +2,10 @@
   <div class="container-fluid">
 
     <div class="row mt-3">
-      <div class="col-lg-12 mt-5 order-1 text-center d-flex align-items-center justify-content-center">
+      <div class="col-lg-6 mt-5 order-1 text-center d-flex align-items-center justify-content-center">
         <h1>{{ pricing.header }}</h1>
       </div>
-      <div class="col-lg-12 p-5 order-2 d-flex justify-content-center">
+      <div class="col-lg-6 p-5 order-2 d-flex justify-content-center">
         <img :src="pricing.headerImg" alt="">
       </div>
     </div>

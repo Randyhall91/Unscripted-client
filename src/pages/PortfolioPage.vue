@@ -1,7 +1,7 @@
 <template>
   
     <div v-if="portfolioImgs" class="bricks mt-5">
-      <div v-for="img in portfolioImgs" class="p-3 mb-3">
+      <div v-for="img in portfolioImgs" class="p-1 mb-1">
         <img class="img-fluid" :key="img.id" :src="img.url" :alt="img.name">
       </div>
     </div>
