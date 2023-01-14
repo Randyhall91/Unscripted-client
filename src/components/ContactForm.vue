@@ -1,5 +1,5 @@
 <template>
-  <div class="card border-dark">
+  <!-- <div class="card border-dark">
     <div class="card-body">
       <h4 class="card-title">inquiry form</h4>
       <form @submit="handleSubmit" class="fragment">
@@ -97,10 +97,11 @@
         </div>
       </form>
     </div>
-  </div>
+  </div> -->
+  <iframe id="sprout-iframe" src="//api.sproutstudio.com/leads/viewform/d1915802f5dc2a9589db1760692025f247e686a46b45c233/688233" frameborder="0" scrolling="no" style="display: block; margin: 0px; padding: 0px; width: 1px; min-width: 100%; height: 1000px;"></iframe>
 </template>
 
-<script>
+<!-- <script>
 import { ref } from 'vue'
 
 export default {
@@ -119,7 +120,7 @@ export default {
     }
   }
 }
-</script>
+</script> -->
 
 
 <style lang="scss" scoped>
