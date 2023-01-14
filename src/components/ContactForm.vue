@@ -2,7 +2,7 @@
   <iframe ></iframe>
 
 </template>
-<script id='sprout_studio_form_script'  data-lead-form-id='688233' data-base-hostname='sproutstudio.com' src='http://sproutstudio.com/sprout_dynamic_lead_form.js'></script>
+<script id='sprout_studio_form_script'  data-lead-form-id='688233' data-base-hostname='sproutstudio.com' src='https://sproutstudio.com/sprout_dynamic_lead_form.js'></script>
 <!-- <script>
 import { ref } from 'vue'
 
