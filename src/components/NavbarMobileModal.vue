@@ -39,11 +39,13 @@
                   </p>
                 </router-link>
               </li>
+              <li>
+                <router-link :to="{ name: 'Contact' }">
+                  <button class="border bg-dark px-4 py-1 fs-1" data-bs-dismiss="modal">Contact</button>
+                </router-link>
 
+              </li>
             </ul>
-            <router-link :to="{ name: 'Contact' }">
-              <button class="border bg-dark me-5 px-4 py-1 fs-1" data-bs-dismiss="modal">Contact</button>
-            </router-link>
 
           </div>
         </div>
