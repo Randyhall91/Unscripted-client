@@ -1,9 +1,9 @@
 <template>
   <div v-if="post" class="container pt-3">
     <div class="row mt-5">
-      <div class="col-12 d-flex justify-content-center headImg" :style="{ 'background-image': 'url(' + post.headerImg.url + ')', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'bottom' }">
-        <!-- <img class="img-fluid" :src="post.headerImg.url" :alt="post.headerImg.name"> -->
-      </div>
+      <!-- <div class="col-12 d-flex justify-content-center headImg" :style="{ 'background-image': 'url(' + post.headerImg.url + ')', 'background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'bottom' }">
+      </div> -->
+      <img :src="post.headerImg.url" :alt="post.headerImg.name">
     </div>
     <div class="row">
       <div class="col-12">
