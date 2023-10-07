@@ -5,15 +5,15 @@
       <div class="col-lg-6 mt-5 order-1 text-center d-flex align-items-center justify-content-center">
         <h1>{{ pricing.header }}</h1>
       </div>
-      <div class="col-lg-6 p-5 order-2 d-flex justify-content-center">
+      <div class="col-lg-6 pt-5 order-2 d-flex justify-content-center  overflow-hidden">
         <img :src="pricing.headerImg" alt="">
       </div>
     </div>
     <div class="row align-items-center">
       <div class="col-lg-4 order-lg-1 order-2 justify-content-center d-flex">
-        <div class="mobile-spacing">
-          <img :src="pricing.descriptionImg" class="img-fluid" alt="">
-        </div>
+        <!-- <div class=""> -->
+        <img :src="pricing.descriptionImg" class="img-fluid" alt="">
+        <!-- </div> -->
       </div>
       <div class="col-lg-8 order-lg-2 order-1 align-middle px-3">
         <p class="fragment fs-5 text-center">
